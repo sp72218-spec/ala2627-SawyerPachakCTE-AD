@@ -1,60 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="night">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CHANGE THIS. It is the name on the browser tab, and it is what Google shows. -->
-  <title>Your Name — what you build Test</title>
-
-  <!-- CHANGE THIS TOO. One sentence. It is what shows under your link when someone shares it. -->
-  <meta name="description" content="One sentence about who you are and what you make.">
-
+  <meta name="theme-color" content="#10151d">
+  <title>Sawyer Pachak - design in progress</title>
+  <meta name="description"
+    content="The personal site of Sawyer Pachak, an app design student building thoughtful things for the web.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
-
-  <header>
-    <!-- Exactly ONE h1 on the page. It is your name. -->
-    <h1>Your Name - Try Here FIRST</h1>
-    <p class="tagline">One line: what you do, and who it is for.</p>
+<body id="top">
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="pointer-glow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="wordmark" href="index.html" aria-label="Sawyer Pachak home"><span>SP</span> / 2026</a>
+    <div class="topbar-tools">
+      <span class="location"><i class="live-dot"></i> Mesa, AZ</span>
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false"><span
+          class="theme-icon" aria-hidden="true">◐</span><span class="theme-label">Light mode</span></button>
+    </div>
   </header>
 
-  <main>
-
-    <section>
-      <h2>What I am working on</h2>
-      <ul>
-        <li><strong>Something real.</strong> What it is, in one line.</li>
-        <li><strong>Something else.</strong> Keep it concrete — a thing you made, not a skill you have.</li>
-      </ul>
+  <main class="bento-shell">
+    <section class="tile hero-tile reveal" data-tilt>
+      <div class="tile-topline"><span class="kicker">Personal index / 01</span><span class="tile-number">[ hello
+          ]</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">Student designer + curious builder</p>
+        <h1>Sawyer<br><em>Pachak.</em></h1>
+        <p class="hero-summary">I turn half-formed ideas into useful, good-looking things that live on the internet.</p>
+      </div>
+      <div class="hero-bottom"><span class="scroll-note"><span class="scroll-arrow">↓</span> Scroll to
+          explore</span><span class="availability"><i class="live-dot"></i> Available for experiments</span></div>
     </section>
-
-    <section>
-      <h2>What I am learning</h2>
-      <p>
-        Two or three sentences. Name the actual tools. "I am learning networking and how data
-        centers stay online" beats "I am passionate about technology."
-      </p>
+    <section class="tile status-tile reveal" data-tilt>
+      <div class="tile-topline"><span class="kicker">Current status</span><span class="status-mark">↗</span></div>
+      <p class="status-quote">Learning in public,<br><strong>one commit at a time.</strong></p>
+      <div class="status-meta"><span>Local time</span><time id="local-time">--:-- --</time></div>
     </section>
-
-    <section>
-      <h2>Get in touch</h2>
-      <!--
-        Put an email you will still control after graduation. If you only have the school one
-        today, that is fine — put it in, and change it later. That is what commits are for.
-      -->
-      <p><a href="mailto:you@example.com">you@example.com</a></p>
+    <section class="tile now-tile reveal" id="now" data-tilt>
+      <div class="tile-topline"><span class="kicker">Right now</span><span class="tile-number">02 / 04</span></div>
+      <div class="now-list">
+        <div><span class="now-label">Building</span><strong>my first real portfolio</strong></div>
+        <div><span class="now-label">Learning</span><strong>JavaScript + motion</strong></div>
+        <div><span class="now-label">Into</span><strong>clean interfaces, loud ideas</strong></div>
+      </div>
+      <span class="corner-mark" aria-hidden="true">+</span>
     </section>
-
+    <section class="tile projects-tile reveal" id="work">
+      <div class="tile-topline"><span class="kicker">Selected work</span><span class="tile-number">03 / 04</span></div>
+      <div class="project-list">
+        <a class="project-row" href="assignments/01-this-is-me/"><span class="project-index">01</span><span
+            class="project-name">This Is Me</span><span class="project-type">web / identity</span><span
+            class="project-arrow">↗</span></a>
+        <a class="project-row" href="day-24/"><span class="project-index">02</span><span class="project-name">Layout
+            Lab</span><span class="project-type">interaction / css</span><span class="project-arrow">↗</span></a>
+        <a class="project-row" href="game/"><span class="project-index">03</span><span class="project-name">The
+            Vault</span><span class="project-type">python / story</span><span class="project-arrow">↗</span></a>
+      </div>
+    </section>
+    <section class="tile toolkit-tile reveal" data-tilt>
+      <div class="tile-topline"><span class="kicker">Toolkit</span><span class="tile-number">04 / 04</span></div>
+      <div class="toolkit-list">
+        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Figma</span><span>Git</span>
+      </div>
+      <p class="toolkit-note">Small stack.<br>Big curiosity.</p>
+    </section>
+    <section class="tile contact-tile reveal" id="contact">
+      <div class="contact-heading"><span class="kicker">Say hello</span><span class="status-mark">✳</span></div>
+      <h2>Have a good<br><em>idea?</em></h2>
+      <button class="email-button" type="button"
+        data-copy-email="sawyer.pachak@example.com"><span>sawyer.pachak@example.com</span><span class="copy-label">Copy
+          email</span></button>
+    </section>
   </main>
 
-  <footer>
-    <p>Built by hand. Last updated <!-- change this when you change the page --> August 2026.</p>
-  </footer>
-
+  <footer class="footer"><span>Made with curiosity by Sawyer Pachak</span><span>Last updated / September 2026</span><a
+      href="#top" aria-label="Back to top">↑ top</a></footer>
+  <div class="toast" role="status" aria-live="polite">Email copied</div>
+  <script src="app.js"></script>
 </body>
 
 </html>
